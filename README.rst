@@ -28,3 +28,7 @@ Framework to create, manage and run sanity tests for any project or workflow in 
 - Folder Structure - (Python, PySide)
 
 Library to solve and parse file system locations.
+
+.. image:: /MetaHumanFacialExpressions/facialexpressions.png
+   :alt: Facial Expressions
+   :align: center
