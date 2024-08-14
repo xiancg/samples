@@ -7,10 +7,6 @@ The Rig Manager is a dockable PySide GUI to facilitate selection and manipulatio
    :alt: Rig Manager - Face regions
    :align: center
 
-.. image:: layers.png
-   :alt: Rig Manager - Layers
-   :align: center
-
 As a companion to the Rig Manager, I also wrote a Rig Manipulator which is a Maya plugin that creates a tool (a context in Maya's API terms) to let the user select and move the facial rig controls with the same tool (without having to switch from selection to move tool). The manipulator is also aware of the selection operations performed in the Rig Manager and the SQLite database, so it can be used to work with the controls in the same way through key modifiers and mouse buttons combinations.
 
 .. image:: rigmanipulator.gif
