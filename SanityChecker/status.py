@@ -50,19 +50,19 @@ class CheckStatus:
         """
         if status_code == -1:
             status_code = self.__code
-        if self.__is_status_valid(status_code):
-            if status_code == self.passed:
-                return "passed"
-            if status_code == self.not_passed:
-                return "not_passed"
-            if status_code == self.failed:
-                return "failed"
-            if status_code == self.cancelled:
-                return "cancelled"
-            if status_code == self.not_ran:
-                return "not_ran"
-            if status_code == self.running:
-                return "running"
+
+        switcher = {
+            self.passed: "passed",
+            self.not_passed: "not_passed",
+            self.failed: "failed",
+            self.cancelled: "cancelled",
+            self.not_ran: "not_ran",
+            self.running: "running",
+        }
+        try:
+            return switcher[status_code]
+        except KeyError:
+            raise ImplementationError(f"Invalid status code value '{status_code}'.")
 
     def __is_status_valid(self, code: int) -> bool:
         """Validate the given status code.
@@ -190,17 +190,17 @@ class ContextStatus:
         """
         if status_code == -1:
             status_code = self.__code
-        if self.__is_status_valid(status_code):
-            if status_code == self.ready:
-                return "ready"
-            if status_code == self.not_ready:
-                return "not_ready"
-            if status_code == self.failed:
-                return "failed"
-            if status_code == self.cancelled:
-                return "cancelled"
-            if status_code == self.finished:
-                return "finished"
+        switcher = {
+            self.ready: "ready",
+            self.not_ready: "not_ready",
+            self.failed: "failed",
+            self.cancelled: "cancelled",
+            self.finished: "finished",
+        }
+        try:
+            return switcher[status_code]
+        except KeyError:
+            raise ImplementationError(f"Invalid status code value '{status_code}'.")
 
     def __is_status_valid(self, code: int) -> bool:
         """Validate the given status code.
