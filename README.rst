@@ -13,6 +13,10 @@ Import/Export of blendshape target per vertex weights to a custom binary file fo
 
 Facial rigs GUI picker with ORM and a Maya context for simplified rig manipulation.
 
+- MetaHuman Facial Expressions - (Maya Python APY, PySide, DNA API, ZPlugins)
+
+Advanced tweaking of MetaHuman facial expressions and correctives using skin decomposition and full DNA data manipulation.
+
 - Live Deltas deformer - (Maya C++ API)
 
 Maya Deformer that's part of the MetaHuman facial expressions workflow I've been working on lately.
@@ -24,3 +28,7 @@ Framework to create, manage and run sanity tests for any project or workflow in 
 - Folder Structure - (Python, PySide)
 
 Library to solve and parse file system locations.
+
+.. image:: /MetaHumanFacialExpressions/facialexpressions.png
+   :alt: Facial Expressions
+   :align: center
